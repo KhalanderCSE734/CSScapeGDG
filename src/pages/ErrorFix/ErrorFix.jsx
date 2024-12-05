@@ -1,23 +1,36 @@
 import React from "react";
-import "../css/Errorfix.css";
-import logo from "../assets/profile.png"
+// import "../css/Errorfix.css";
+import "./Errorfix.css";
+// import './ErrorFix/ErrorFix.css';
+// import logo from "../assets/profile.png";
+// import logo from "..\src\assets\profile.png";
+// import logo from './assets/profile';
+// import logo from ''
+// import logo from './assets/profile';
 
-const ProfilePage = () => {
-  const [likes, setLike] = React.useState("0");
+import{useState} from 'react';
+const ErrorFix = () => {
+  const [likes, setLikes] = useState("0");
+
+  // const handleLike = () => {
+  //   setLikes(likes + 1);
+  // };
 
   const handleLike = () => {
-    setLikes(likes + 1);
+    setLikes((prevLikes) => prevLikes + 1);
   };
-
-
+  const phone = "123-456-7890";
+  const linkedin = "https://linkedin.com/in/johndoe";
+  const github = "https://github.com/johndoe";
 
   return (
     <div className="profile-page">
-      <header className="profile-header">
+      <header className="profile-header"/>
         <div className="profile-header-content">
     {/* /************************************************************* start  **************************************************************** */ }
           <img
-            src={logo}
+            // src={logo}
+            src="/src/assets/profile.png"
             alt="Profile"
             className="profile-image"
           />
@@ -32,12 +45,12 @@ const ProfilePage = () => {
             </p>
           </div>
         </div>
-   /   
+    
       <main className="profile-content">
         {/* Skills Section */}
         <section className="profile-section">
           <h3 className="section-title">Skills</h3>
-          <ul className:"skills-list">
+          <ul className="skills-list">
             <li>React, Angular, and Vue.js</li>
             <li>Node.js, Express, and Python/Django</li>
             <li>RESTful and GraphQL API development</li>
@@ -127,7 +140,7 @@ const ProfilePage = () => {
         </section>
 
         {/* Certifications Section */}
-        <section class="profile-section">
+        <section className="profile-section">
           <h3 className="section-title">Certifications</h3>
           <ul className="certifications-list">
             <li>Certified Kubernetes Administrator (CKA)</li>
@@ -182,5 +195,5 @@ const ProfilePage = () => {
     </div>
   );
 
-
-export default Profile-Page;
+}
+export default ErrorFix;

@@ -1,5 +1,78 @@
 /* write your css here */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
 a{
     text-decoration: none;
     color: black;
+}
+
+.z-container{
+    padding:30px;
+    position: relative;
+}
+
+.z-about-us-header{
+    background-color: #ffffffc5;
+    height:60px;
+    border-radius: 0.2rem;
+    h1{
+        text-align: center;
+    }
+    .z-divider{
+        width:10%;
+        margin:auto;
+        height:3px;
+        background-color:#5990B4;
+        margin-top:10px;
+    }
+}
+
+.stadium{
+
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    column-gap:100px;
+
+}
+
+
+.stadium .info{
+    width:40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items:flex-start;
+    row-gap:20px;
+    margin-bottom:50px;
+    h1{
+        font-size:2rem;
+    }
+    button{
+        padding:10px;
+        border-radius:0.2rem;
+        border:none;
+        background-color: #3895DF;
+        color:white;
+        cursor: pointer;
+        &:focus{
+            outline:none;
+        }
+    }
+}
+
+.foot{
+    width:100%;
+    position:absolute;
+    bottom:0;
+    height: 50px;
+    background-color: #2D3E50;
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
